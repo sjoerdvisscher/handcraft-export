@@ -65,14 +65,14 @@ Note.prototype.stopNote = function() {
 };
   
 if('webkitAudioContext' in window) {
-    audioCtx = new webkitAudioContext();
-	fromTouchEnd = false;
+    audioCtx = new window.webkitAudioContext();
+	var fromTouchEnd = false;
 	document.body.ontouchend = function() {
 		if (!fromTouchEnd) {
-			audioCtx = new webkitAudioContext();
+			audioCtx = new window.webkitAudioContext();
 			fromTouchEnd = true;
 			  var request = new XMLHttpRequest();
-  request.open('GET', '/media/rhodes.mp3', true);
+  request.open('GET', 'https://cdn.glitch.com/d4395f6d-f5a9-4c72-baaf-d540b05e361d%2Frhodes.mp3?1515162947197', true);
   request.responseType = 'arraybuffer';
 	request.addEventListener('load', function () {
 		audioCtx.decodeAudioData(request.response, function (buffer) { 
@@ -91,7 +91,7 @@ if('webkitAudioContext' in window) {
     }
 
   var request = new XMLHttpRequest();
-  request.open('GET', '/media/rhodes.mp3', true);
+  request.open('GET', 'https://cdn.glitch.com/d4395f6d-f5a9-4c72-baaf-d540b05e361d%2Frhodes.mp3?1515162947197', true);
   request.responseType = 'arraybuffer';
 	request.addEventListener('load', function () {
 		audioCtx.decodeAudioData(request.response, function (buffer) { soundBuffer = buffer })

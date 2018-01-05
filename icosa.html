@@ -1,10 +1,6 @@
-<page url="/icosa" type="html5">
   <html>
     <head>
       <title>Morphing Platonic Solids</title>
-			<script src="/3dsvg.js"></script>
-			<script src="/icosa.js"></script>
-			<link rel="stylesheet" href="/icosa.css" />
     </head>
     <body onload="start()">
       <svg viewBox="-1 -1 2 2" width="100%" height="100%" shape-rendering="optimizeSpeed" color-rendering="optimizeSpeed">
@@ -35,12 +31,8 @@
       </div>
     </body>
   </html>
-	<script>
-		document.write('<xmp>');
-	</script>
-</page>
-
-<page url="/icosa.css" type="css">
+	
+<style>
   html, body { padding: 0; margin: 0; overflow: hidden; width: 100%; height: 100% }
   div {
     position: fixed;
@@ -51,9 +43,9 @@
   td+td+td {
     text-align: right;
   }
-</page>
+</style>
 
-<page url="/icosa.js" type="js">
+<script>
     var phi = (Math.sqrt(5) + 1)/2;
     var points = [];
     var polys = [];
@@ -224,9 +216,7 @@
         a = a.add(pts[i], f);
       return a;
     }
-</page>
 
-<page url="/3dsvg.js" type="js">
 /*****
 * 3D SVG Library
 * Sjoerd Visscher
@@ -486,4 +476,4 @@ VisibleQuadrangle.prototype.calculateNormal = function() {
   }
 }
 VisibleQuadrangle.prototype.shadowTo2d = function() {};
-</page>
+</script>

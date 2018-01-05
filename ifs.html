@@ -1,4 +1,3 @@
-<page url="/ifs" type="html5">
   <html>
     <head>
       <title>Iterated function system</title>
@@ -18,9 +17,8 @@
       <div id="help">Click to add more branches.</div>
     </body>
   </html>
-</page>
 
-<page url="/ifs.css" type="css">
+<style>
   body { 
     text-align:center; 
     cursor: pointer; 
@@ -32,9 +30,9 @@
     width: 100%; 
     font-family: sans-serif;
   }
-</page>
+</style>
 
-<page url="/ifs.js" type="js">
+<script>
 var data;
 var startTime = new Date();
 var curX = 0; var curY = 0;
@@ -86,4 +84,4 @@ function doClick()
   draw();
   document.getElementById("help").style.display = "none";
 }
-</page>
+</script>

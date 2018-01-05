@@ -1,3 +1,4 @@
+<!--
 <page url="/roots__">
   <form method="get">
     degree: <input name="degree" value="{if($get/degree, $get/degree, 11)}" type="number"/>
@@ -13,18 +14,16 @@
   </script>
 	<script src="roots.js"></script>
 </page>
+-->
 
-<page url="/roots">
   <canvas></canvas>
   <script>
     var degree = 11;
     var size = 400;
     var lightness = 10;
   </script>
-	<script src="roots.js"></script>
-</page>
 
-<page url="/roots.js" type="js">
+<script>
 var canvas = document.getElementsByTagName("canvas")[0];
 canvas.width = size * 2;
 canvas.height = size * 2;
@@ -78,4 +77,4 @@ function countRoots(xr, xi)
     dist += Math.pow(resr[i] * resr[i] + resi[i] * resi[i], -2);
   return dist * Math.pow(xr * xr + xi * xi, degree);
 }  
-</page>
+</script>

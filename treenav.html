@@ -1,9 +1,6 @@
-<page url="/treenav" type="html">
   <html>
     <head>
       <title>Animated TOC navigation</title>
-      <script src="/repository.js" type="text/javascript"></script>
-      <link type="text/css" rel="stylesheet" href="/treenav.css"/>
       <link type="text/css" rel="stylesheet" href="http://www.w3.org/StyleSheets/TR/W3C-REC.css"/>
       <script src="/ga.js" type="text/javascript"></script>
       <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -3399,9 +3396,8 @@ are also gratefully acknowledged.</p>
       </div>
     </body>
   </html>
-</page>
 
-<page url="/repository.js" type="js">
+<script>
   var pane;
 var heads=[];
 var saveScrollTO=0;
@@ -3555,9 +3551,9 @@ function createScrollbar(srcEl) {
 
   srcEl.style.filter = "progid:DXImageTransform.Microsoft.Alpha(style=1,opacity=100,finishOpacity=60,startx="+(100*srcEl.clientWidth/srcEl.offsetWidth)+",starty=0,finishx=100,finishy=0)";
 }
-</page>
+</script>
 
-<page url="/treenav.css" type="css">
+<style>
 html, body {
   padding:0px !important; margin:0px !important;
   overflow: hidden;
@@ -3627,4 +3623,4 @@ html, body {
 * {
   -moz-box-sizing: border-box;
 }
-</page>
+</style>
