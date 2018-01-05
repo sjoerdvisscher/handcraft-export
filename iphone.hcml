@@ -1,0 +1,5 @@
+<page url="/iphone">
+  <div contenteditable="true" autocapitalize="off">test</div>
+  <input autocapitalize="off" value="off"/>
+  <input autocapitalize="on" value="on"/>
+</page>

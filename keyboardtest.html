@@ -1,0 +1,27 @@
+<html>
+	<head>
+		<title>Your new HTML file</title>
+	</head>
+	<body>
+		<script>
+			var data = [];
+			var just5 = Math.log(3/2)/Math.log(2);
+			var just3 = Math.log(5/4)/Math.log(2);
+			for (var octave = 5; octave < 100; octave++)
+			{
+				var fifth = Math.round(just5 * octave);
+				var major = Math.round(just3 * octave);
+				var fourth = octave - fifth;
+				var whole = fifth - fourth;
+				var diff = whole - (major - whole);
+				if (diff == 0 && (fifth & 1) == 0)
+					data.push({ 
+						octave: octave,
+						diff: Math.abs(just5 - fifth/octave) //+ Math.abs(just3 - major/octave)
+					});
+			}
+			data.sort(function(a, b) { return (a.diff - b.diff) || (a.octave - b.octave) });
+			console.log(data);
+		</script>
+	</body>
+</html>
